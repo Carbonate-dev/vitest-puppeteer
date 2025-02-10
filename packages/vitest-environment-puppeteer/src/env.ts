@@ -4,7 +4,7 @@ import { blockStdin } from "./stdin.js";
 import { connectBrowserFromWorker } from "./browsers.js";
 import type { VitestPuppeteerConfig } from "./config.js";
 import type { Page, BrowserContext, Browser } from "puppeteer";
-import {Environment} from "vitest";
+import { Environment } from "vitest";
 
 type VitestPuppeteer = {
   debug: () => Promise<void>;
@@ -133,36 +133,36 @@ const closeAll = async (global: StrictGlobal) => {
 };
 
 export const PuppeteerEnvironment = <Environment>{
-  name: 'puppeteer',
+  name: "puppeteer",
   transformMode: "ssr",
   async setup(global) {
     global.puppeteerConfig = await readConfig();
     global.vitestPuppeteer = {
-        debug: async () => {
-          // Set timeout to 4 days
-          global[testTimeoutSymbol] = 345600000;
-          // Run a debugger (in case Puppeteer has been launched with `{ devtools: true }`)
-          await getPage(global).evaluate(() => {
-            debugger;
-          });
-          return blockStdin();
-        },
-        resetPage: async () => {
-          await closePage(global);
-          await openPage(global);
-        },
-        resetBrowser: async () => {
-          await closeAll(global);
-          await initAll(global);
-        },
-      };
+      debug: async () => {
+        // Set timeout to 4 days
+        global[testTimeoutSymbol] = 345600000;
+        // Run a debugger (in case Puppeteer has been launched with `{ devtools: true }`)
+        await getPage(global).evaluate(() => {
+          debugger;
+        });
+        return blockStdin();
+      },
+      resetPage: async () => {
+        await closePage(global);
+        await openPage(global);
+      },
+      resetBrowser: async () => {
+        await closeAll(global);
+        await initAll(global);
+      },
+    };
     await initAll(global);
 
     return {
       async teardown() {
         await closeAll(global);
-      }
-    }
+      },
+    };
   },
 };
 

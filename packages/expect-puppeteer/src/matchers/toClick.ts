@@ -1,6 +1,6 @@
 import type { ClickOptions } from "puppeteer";
 import { PuppeteerInstance, Selector } from "../utils.js";
-import {toMatchElement, ToMatchElementOptions} from "./toMatchElement.js";
+import { toMatchElement, ToMatchElementOptions } from "./toMatchElement.js";
 
 export type ToClickOptions = ToMatchElementOptions & ClickOptions;
 

@@ -1,7 +1,7 @@
 import { cpus } from "node:os";
 import type { VitestPuppeteerConfig } from "./config.js";
 import type { PuppeteerNode, Browser } from "puppeteer";
-import {GlobalSetupContext} from "vitest/node.js";
+import { GlobalSetupContext } from "vitest/node.js";
 
 const getPuppeteer = (): PuppeteerNode => {
   try {
@@ -13,7 +13,7 @@ const getPuppeteer = (): PuppeteerNode => {
   }
 };
 
-const getWorkersCount = (viConfig: GlobalSetupContext['config']): number => {
+const getWorkersCount = (viConfig: GlobalSetupContext["config"]): number => {
   if (viConfig.maxWorkers != null) return Number(viConfig.maxWorkers);
   if (viConfig.watch) return 1;
   return cpus().length - 1;
@@ -80,7 +80,7 @@ export const startBrowsers = async ({
   viConfig,
 }: {
   config: VitestPuppeteerConfig;
-  viConfig: GlobalSetupContext['config'];
+  viConfig: GlobalSetupContext["config"];
 }): Promise<Browser[]> => {
   const workersCount = getWorkersCount(viConfig);
   saveWorkersCount(workersCount);

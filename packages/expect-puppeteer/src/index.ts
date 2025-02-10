@@ -31,36 +31,36 @@ type PuppeteerMatcher<T> = (page: T, ...args: unknown[]) => Promise<unknown>;
 
 // return intersection type from union type
 type Intersection<T> = (T extends unknown ? (k: T) => void : never) extends (
-    k: infer R,
-  ) => void
+  k: infer R,
+) => void
   ? R
   : never;
 
 // declare wrapped matcher function signature
 type Wrapper<T> = T extends (
-    page: Intersection<PuppeteerInstance>,
-    ...args: infer A
-  ) => infer R
+  page: Intersection<PuppeteerInstance>,
+  ...args: infer A
+) => infer R
   ? (...args: A) => R
   : never;
 
 // declare common matchers list
 type InstanceMatchers<T> = T extends PuppeteerInstance
   ? {
-    // common
-    toClick: Wrapper<typeof toClick>;
-    toFill: Wrapper<typeof toFill>;
-    toFillForm: Wrapper<typeof toFillForm>;
-    toMatchTextContent: Wrapper<typeof toMatchTextContent>;
-    toMatchElement: Wrapper<typeof toMatchElement>;
-    toSelect: Wrapper<typeof toSelect>;
-    toUploadFile: Wrapper<typeof toUploadFile>;
-    // inverse matchers
-    not: {
-      toMatchTextContent: Wrapper<typeof notToMatchTextContent>;
-      toMatchElement: Wrapper<typeof notToMatchElement>;
-    };
-  }
+      // common
+      toClick: Wrapper<typeof toClick>;
+      toFill: Wrapper<typeof toFill>;
+      toFillForm: Wrapper<typeof toFillForm>;
+      toMatchTextContent: Wrapper<typeof toMatchTextContent>;
+      toMatchElement: Wrapper<typeof toMatchElement>;
+      toSelect: Wrapper<typeof toSelect>;
+      toUploadFile: Wrapper<typeof toUploadFile>;
+      // inverse matchers
+      not: {
+        toMatchTextContent: Wrapper<typeof notToMatchTextContent>;
+        toMatchElement: Wrapper<typeof notToMatchElement>;
+      };
+    }
   : never;
 
 // declare page matchers list

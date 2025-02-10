@@ -18,10 +18,7 @@ module.exports = {
   overrides: [
     {
       files: ["*.test.?(m|t)js"],
-      env: {
-        "jest/globals": true,
-      },
-      plugins: ["jest"],
+      plugins: ["vitest"],
     },
     {
       files: ["*.ts"],

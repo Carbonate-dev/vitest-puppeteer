@@ -1,5 +1,5 @@
 import { getDefaultOptions, setDefaultOptions } from "./index.js";
-import { expect } from 'vitest';
+import { expect } from "vitest";
 
 // import globals
 import "vitest-puppeteer";

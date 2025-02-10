@@ -1,6 +1,6 @@
 import type { ElementHandle } from "puppeteer";
 import { PuppeteerInstance, Selector } from "../utils.js";
-import {toMatchElement, ToMatchElementOptions} from "./toMatchElement.js";
+import { toMatchElement, ToMatchElementOptions } from "./toMatchElement.js";
 
 async function selectAll(element: ElementHandle<Element>) {
   // modified from https://github.com/microsoft/playwright/issues/849#issuecomment-587983363

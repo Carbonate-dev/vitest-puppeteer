@@ -1,5 +1,4 @@
-This is a port of [jest-puppeteer](https://github.com/argos-ci/jest-puppeteer) to Vitest. Some of the documentation may still refer to Jest specific things so please report any issues.
----
+## This is a port of [jest-puppeteer](https://github.com/argos-ci/jest-puppeteer) to Vitest. Some of the documentation may still refer to Jest specific things so please report any issues.
 
 # 🎪 vitest-puppeteer
 
@@ -46,12 +45,12 @@ This will install Vitest (the testing framework), Puppeteer (the headless browse
 In your Vitest configuration file (`vitest.config.js`), add `vitest-puppeteer` as the `environment` and `globalSetup`:
 
 ```typescript
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
-    environment: './vitest-environment-puppeteer/dist/env.ts',
-    globalSetup: './vitest-environment-puppeteer/dist/global-init.ts',
+    environment: "./vitest-environment-puppeteer/dist/env.ts",
+    globalSetup: "./vitest-environment-puppeteer/dist/global-init.ts",
   },
 });
 ```

@@ -260,8 +260,8 @@ const waitForServerToBeReady = async (config: Config) => {
 
   try {
     await waitOn(opts);
-  } catch (err: Error) {
-    if (checkIsTimeoutError(err)) {
+  } catch (err: unknown) {
+    if (checkIsTimeoutError(err as Error)) {
       throw new JestDevServerError(
         `Server has taken more than ${launchTimeout}ms to start.`,
         { code: ERROR_TIMEOUT },

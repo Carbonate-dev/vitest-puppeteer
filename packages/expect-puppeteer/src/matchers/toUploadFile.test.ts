@@ -1,10 +1,10 @@
 import { resolve } from "node:path";
-import { setupPage } from "./test-util";
+import { setupPage } from "./test-util.js";
 import { Frame, Page, TimeoutError } from "puppeteer";
 
 // import globals
-import "jest-puppeteer";
-import "expect-puppeteer";
+import "vitest-puppeteer";
+import "../index.js";
 
 describe("toUploadFile", () => {
   beforeEach(async () => {
@@ -26,7 +26,7 @@ describe("toUploadFile", () => {
     });
 
     it("should return an error if upload is not possible", async () => {
-      expect.assertions(2);
+      expect.assertions(3);
 
       try {
         await expect(instance).toUploadFile(
@@ -51,7 +51,7 @@ describe("toUploadFile", () => {
 
     it("should return an error if upload is not possible", async () => {
       const body = await page.$("body");
-      expect.assertions(2);
+      expect.assertions(3);
 
       try {
         await expect(body).toUploadFile(

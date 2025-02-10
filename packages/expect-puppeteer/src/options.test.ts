@@ -3,7 +3,7 @@ import {
   getDefaultOptions,
   setDefaultOptions,
   defaultOptions,
-} from "./options";
+} from "./options.js";
 
 describe("options", () => {
   it("should get and set default options", () => {

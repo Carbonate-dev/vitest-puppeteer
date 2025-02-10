@@ -225,7 +225,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### BREAKING CHANGES
 
 * - `spawnd` now exports `{ spawd }` instead of default to ensure
-  compatibilty with ESM
+    compatibilty with ESM
 - `toMatch` has been renamed `toMatchTextContent` to avoid collision
   with existing Jest matcher
 

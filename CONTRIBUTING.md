@@ -1,14 +1,14 @@
 # How to Contribute
 
-jest-puppeteer is a small project, it is widely used but has not a lot of contributors. We're still working out the kinks to make contributing to this project as easy and transparent as possible, but we're not quite there yet. Hopefully this document makes the process for contributing clear and answers some questions that you may have.
+vitest-puppeteer is a small project, it is widely used but has not a lot of contributors. We're still working out the kinks to make contributing to this project as easy and transparent as possible, but we're not quite there yet. Hopefully this document makes the process for contributing clear and answers some questions that you may have.
 
-## [Code of Conduct](https://github.com/smooth-code/jest-puppeteer/blob/master/CODE_OF_CONDUCT.md)
+## [Code of Conduct](https://github.com/carbonate-dev/vitest-puppeteer/blob/master/CODE_OF_CONDUCT.md)
 
-We expect project participants to adhere to our Code of Conduct. Please read [the full text](https://github.com/smooth-code/jest-puppeteer/blob/master/CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+We expect project participants to adhere to our Code of Conduct. Please read [the full text](https://github.com/carbonate-dev/vitest-puppeteer/blob/master/CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
 
 ## Open Development
 
-All work on jest-puppeteer happens directly on [GitHub](/). Both core team members and external contributors send pull requests which go through the same review process.
+All work on vitest-puppeteer happens directly on [GitHub](/). Both core team members and external contributors send pull requests which go through the same review process.
 
 ### Workflow and Pull Requests
 
@@ -19,8 +19,8 @@ _Before_ submitting a pull request, please make sure the following is done…
     Open terminal (e.g. Terminal, iTerm, Git Bash or Git Shell) and type:
 
     ```sh-session
-    $ git clone https://github.com/<your_username>/jest-puppeteer
-    $ cd jest-puppeteer
+    $ git clone https://github.com/<your_username>/vitest-puppeteer
+    $ cd vitest-puppeteer
     $ git checkout -b my_branch
     ```
 
@@ -50,4 +50,4 @@ Please follow the `.prettierrc` in the project.
 
 ## License
 
-By contributing to jest-puppeteer, you agree that your contributions will be licensed under its MIT license.
+By contributing to vitest-puppeteer, you agree that your contributions will be licensed under its MIT license.

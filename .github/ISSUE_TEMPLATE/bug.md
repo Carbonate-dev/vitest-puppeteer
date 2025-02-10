@@ -23,7 +23,7 @@ Please provide a minimal repository on GitHub.
 
 Issues without a reproduction link are likely to stall.
 
-## Run `npx envinfo --system --binaries --npmPackages expect-puppeteer,jest-dev-server,jest-environment-puppeteer,jest-puppeteer,spawnd --markdown --clipboard`
+## Run `npx envinfo --system --binaries --npmPackages expect-puppeteer,vitest-dev-server,vitest-environment-puppeteer,vitest-puppeteer,spawnd --markdown --clipboard`
 
 Paste the results here:
 

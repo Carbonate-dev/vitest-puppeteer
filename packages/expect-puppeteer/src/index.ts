@@ -1,28 +1,28 @@
 // import modules
-import { notToMatchTextContent } from "./matchers/notToMatchTextContent";
-import { notToMatchElement } from "./matchers/notToMatchElement";
-import { toClick } from "./matchers/toClick";
-import { toDisplayDialog } from "./matchers/toDisplayDialog";
-import { toFill } from "./matchers/toFill";
-import { toFillForm } from "./matchers/toFillForm";
-import { toMatchTextContent } from "./matchers/toMatchTextContent";
-import { toMatchElement } from "./matchers/toMatchElement";
-import { toSelect } from "./matchers/toSelect";
-import { toUploadFile } from "./matchers/toUploadFile";
+import { notToMatchTextContent } from "./matchers/notToMatchTextContent.js";
+import { notToMatchElement } from "./matchers/notToMatchElement.js";
+import { toClick } from "./matchers/toClick.js";
+import { toDisplayDialog } from "./matchers/toDisplayDialog.js";
+import { toFill } from "./matchers/toFill.js";
+import { toFillForm } from "./matchers/toFillForm.js";
+import { toMatchTextContent } from "./matchers/toMatchTextContent.js";
+import { toMatchElement } from "./matchers/toMatchElement.js";
+import { toSelect } from "./matchers/toSelect.js";
+import { toUploadFile } from "./matchers/toUploadFile.js";
 import {
   checkIsPuppeteerInstance,
   checkIsElementHandle,
   checkIsFrame,
   checkIsPage,
-} from "./utils";
+} from "./utils.js";
 
 // import interfaces and types
-import type { JestExpect } from "@jest/expect";
+import type { ExpectStatic as JestExpect } from "@vitest/expect";
 import type { ElementHandle, Frame, Page } from "puppeteer";
-import type { PuppeteerInstance } from "./utils";
+import type { PuppeteerInstance } from "./utils.js";
 
 // reexport
-export { setDefaultOptions, getDefaultOptions } from "./options";
+export { setDefaultOptions, getDefaultOptions } from "./options.js";
 
 // ---------------------------
 
@@ -31,36 +31,36 @@ type PuppeteerMatcher<T> = (page: T, ...args: unknown[]) => Promise<unknown>;
 
 // return intersection type from union type
 type Intersection<T> = (T extends unknown ? (k: T) => void : never) extends (
-  k: infer R,
-) => void
+    k: infer R,
+  ) => void
   ? R
   : never;
 
 // declare wrapped matcher function signature
 type Wrapper<T> = T extends (
-  page: Intersection<PuppeteerInstance>,
-  ...args: infer A
-) => infer R
+    page: Intersection<PuppeteerInstance>,
+    ...args: infer A
+  ) => infer R
   ? (...args: A) => R
   : never;
 
 // declare common matchers list
 type InstanceMatchers<T> = T extends PuppeteerInstance
   ? {
-      // common
-      toClick: Wrapper<typeof toClick>;
-      toFill: Wrapper<typeof toFill>;
-      toFillForm: Wrapper<typeof toFillForm>;
-      toMatchTextContent: Wrapper<typeof toMatchTextContent>;
-      toMatchElement: Wrapper<typeof toMatchElement>;
-      toSelect: Wrapper<typeof toSelect>;
-      toUploadFile: Wrapper<typeof toUploadFile>;
-      // inverse matchers
-      not: {
-        toMatchTextContent: Wrapper<typeof notToMatchTextContent>;
-        toMatchElement: Wrapper<typeof notToMatchElement>;
-      };
-    }
+    // common
+    toClick: Wrapper<typeof toClick>;
+    toFill: Wrapper<typeof toFill>;
+    toFillForm: Wrapper<typeof toFillForm>;
+    toMatchTextContent: Wrapper<typeof toMatchTextContent>;
+    toMatchElement: Wrapper<typeof toMatchElement>;
+    toSelect: Wrapper<typeof toSelect>;
+    toUploadFile: Wrapper<typeof toUploadFile>;
+    // inverse matchers
+    not: {
+      toMatchTextContent: Wrapper<typeof notToMatchTextContent>;
+      toMatchElement: Wrapper<typeof notToMatchElement>;
+    };
+  }
   : never;
 
 // declare page matchers list

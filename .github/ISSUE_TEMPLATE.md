@@ -1,4 +1,4 @@
-## 👉 [Please follow one of these issue templates](https://github.com/smooth-code/jest-puppeteer/issues/new/choose) 👈
+## 👉 [Please follow one of these issue templates](https://github.com/carbonate-dev/vitest-puppeteer/issues/new/choose) 👈
 
 <!-- Love Jest Puppeteer? Please consider supporting our collective: 👉  https://opencollective.com/jest-puppeteer/donate -->
 

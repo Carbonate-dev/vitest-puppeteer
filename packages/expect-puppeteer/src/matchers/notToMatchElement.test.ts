@@ -1,10 +1,10 @@
 import { resolve } from "node:path";
 import { Frame, Page, TimeoutError } from "puppeteer";
-import { setupPage } from "./test-util";
+import { setupPage } from "./test-util.js";
 
 // import globals
-import "jest-puppeteer";
-import "expect-puppeteer";
+import "vitest-puppeteer";
+import "../index.js";
 
 describe("not.toMatchElement", () => {
   beforeEach(async () => {
@@ -25,7 +25,7 @@ describe("not.toMatchElement", () => {
     });
 
     it("should return an error if element is not found", async () => {
-      expect.assertions(4);
+      expect.assertions(5);
 
       try {
         await expect(instance).not.toMatchElement("a", { text: "Page 2" });
@@ -51,7 +51,7 @@ describe("not.toMatchElement", () => {
 
     it("should return an error if element is not found", async () => {
       const main = await page.$("main");
-      expect.assertions(4);
+      expect.assertions(5);
 
       try {
         await expect(main).not.toMatchElement("div", { text: "main" });

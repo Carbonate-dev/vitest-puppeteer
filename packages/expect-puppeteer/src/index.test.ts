@@ -1,7 +1,9 @@
-import { getDefaultOptions, setDefaultOptions } from "expect-puppeteer";
+import { getDefaultOptions, setDefaultOptions } from "./index.js";
+import { expect } from 'vitest';
 
 // import globals
-import "jest-puppeteer";
+import "vitest-puppeteer";
+import "./index.js";
 
 expect.addSnapshotSerializer({
   print: () => "hello",

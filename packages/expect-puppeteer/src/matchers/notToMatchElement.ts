@@ -6,15 +6,15 @@
 // } from "../utils";
 // import { defaultOptions, Options } from "../options";
 
-import { defaultOptions, Options } from "../options";
+import { defaultOptions, Options } from "../options.js";
 import {
   enhanceError,
   getSelectorMessage,
   PuppeteerInstance,
   resolveSelector,
   Selector,
-} from "../utils";
-import { getElementFactory, GetElementOptions } from "./getElementFactory";
+} from "../utils.js";
+import { getElementFactory, GetElementOptions } from "./getElementFactory.js";
 
 export type NotToMatchElementOptions = GetElementOptions & Options;
 

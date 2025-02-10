@@ -5,7 +5,7 @@ import {
   serializeSearchExpression,
   evaluateParseSearchExpression,
   SerializedSearchExpression,
-} from "../utils";
+} from "../utils.js";
 
 export type GetElementOptions = {
   text?: string | RegExp;

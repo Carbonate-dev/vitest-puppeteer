@@ -4,10 +4,10 @@ import {
   Selector,
   resolveSelector,
   getSelectorMessage,
-} from "../utils";
-import type { ElementHandle } from "puppeteer";
-import { defaultOptions, Options } from "../options";
-import { getElementFactory, GetElementOptions } from "./getElementFactory";
+} from "../utils.js";
+import type {ElementHandle} from "puppeteer";
+import { defaultOptions, Options } from "../options.js";
+import { getElementFactory, GetElementOptions } from "./getElementFactory.js";
 
 export type ToMatchElementOptions = GetElementOptions & Options;
 

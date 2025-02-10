@@ -1,5 +1,5 @@
-import { enhanceError, PuppeteerInstance, SearchExpression } from "../utils";
-import { matchTextContent, MatchTextContentOptions } from "./matchTextContent";
+import { enhanceError, PuppeteerInstance, SearchExpression } from "../utils.js";
+import { matchTextContent, MatchTextContentOptions } from "./matchTextContent.js";
 
 export type ToMatchOptions = MatchTextContentOptions;
 

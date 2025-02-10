@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-syntax */
-import { toMatchElement, ToMatchElementOptions } from "./toMatchElement";
-import { PuppeteerInstance, resolveSelector, Selector } from "../utils";
+import {toMatchElement, ToMatchElementOptions} from "./toMatchElement.js";
+import { PuppeteerInstance, resolveSelector, Selector } from "../utils.js";
 import type { ElementHandle } from "puppeteer";
 
 const checkIsSelectElement = (

@@ -11,7 +11,7 @@ module.exports = {
     sourceType: "module",
   },
   globals: {
-    jestPuppeteer: "readonly",
+    vitestPuppeteer: "readonly",
     page: "readonly",
   },
 
@@ -31,9 +31,9 @@ module.exports = {
         project: [
           "./tsconfig.json",
           "./packages/expect-puppeteer/tsconfig.json",
-          "./packages/jest-dev-server/tsconfig.json",
+          "./packages/vitest-dev-server/tsconfig.json",
           "./packages/jest-environment-server/tsconfig.json",
-          "./packages/jest-puppeteer/tsconfig.json",
+          "./packages/vitest-puppeteer/tsconfig.json",
         ],
         tsconfigRootDir: __dirname,
       },

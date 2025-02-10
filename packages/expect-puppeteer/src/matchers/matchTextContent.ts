@@ -4,8 +4,8 @@ import {
   PuppeteerInstance,
   SearchExpression,
   evaluateParseSearchExpression,
-} from "../utils";
-import { defaultOptions, Options } from "../options";
+} from "../utils.js";
+import { defaultOptions, Options } from "../options.js";
 
 export type MatchTextContentOptions = Options & {
   traverseShadowRoots?: boolean;

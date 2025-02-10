@@ -1,3 +1,7 @@
+// import globals
+import "vitest-puppeteer";
+import "../index.js";
+
 describe("toDisplayDialog", () => {
   beforeEach(async () => {
     await page.goto(`http://localhost:${process.env.TEST_SERVER_PORT}`);

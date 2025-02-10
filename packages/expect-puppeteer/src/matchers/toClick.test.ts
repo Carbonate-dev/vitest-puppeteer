@@ -1,10 +1,10 @@
 import { resolve } from "node:path";
-import { setupPage } from "./test-util";
+import { setupPage } from "./test-util.js";
 import { Frame, Page, TimeoutError } from "puppeteer";
 
 // import globals
-import "jest-puppeteer";
-import "expect-puppeteer";
+import "vitest-puppeteer";
+import "../index.js";
 
 describe("toClick", () => {
   beforeEach(async () => {
@@ -67,7 +67,7 @@ describe("toClick", () => {
     });
 
     it("should return an error if element is not found", async () => {
-      expect.assertions(3);
+      expect.assertions(4);
 
       try {
         await expect(instance).toClick("a", { text: "Nop" });
@@ -79,7 +79,7 @@ describe("toClick", () => {
     });
 
     it("should return an error if element is not found with xpath selector", async () => {
-      expect.assertions(3);
+      expect.assertions(4);
 
       try {
         await expect(instance).toClick(
@@ -94,7 +94,7 @@ describe("toClick", () => {
     });
 
     it("should return an error if element is not found with css selector as object", async () => {
-      expect.assertions(3);
+      expect.assertions(4);
 
       try {
         await expect(instance).toClick(
@@ -139,7 +139,7 @@ describe("toClick", () => {
 
     it("should return an error if element is not found", async () => {
       const body = await page.$("body");
-      expect.assertions(3);
+      expect.assertions(4);
 
       try {
         await expect(body).toClick("a", { text: "Nop" });

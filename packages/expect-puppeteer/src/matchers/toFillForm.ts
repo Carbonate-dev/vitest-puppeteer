@@ -1,6 +1,6 @@
-import { PuppeteerInstance, Selector } from "../utils";
-import { toFill, ToFillOptions } from "./toFill";
-import { toMatchElement, ToMatchElementOptions } from "./toMatchElement";
+import { PuppeteerInstance, Selector } from "../utils.js";
+import { toFill, ToFillOptions } from "./toFill.js";
+import {toMatchElement, ToMatchElementOptions} from "./toMatchElement.js";
 
 export type ToFillFormOptions = ToFillOptions & ToMatchElementOptions;
 

@@ -2,7 +2,7 @@
   "name": "expect-puppeteer",
   "description": "Assertion toolkit for Puppeteer.",
   "version": "11.0.0",
-  "type": "commonjs",
+  "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -15,21 +15,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/argos-ci/jest-puppeteer.git",
+    "url": "https://github.com/carbonate-dev/vitest-puppeteer.git",
     "directory": "packages/expect-puppeteer"
   },
   "license": "MIT",
-  "homepage": "https://github.com/argos-ci/jest-puppeteer/tree/main/packages/expect-puppeteer#readme",
+  "homepage": "https://github.com/carbonate-dev/vitest-puppeteer/tree/main/packages/expect-puppeteer#readme",
   "bugs": {
-    "url": "https://github.com/argos-ci/jest-puppeteer/issues"
+    "url": "https://github.com/carbonate-dev/vitest-puppeteer/issues"
   },
   "engines": {
     "node": ">=18"
   },
   "keywords": [
-    "jest",
+    "vitest",
     "puppeteer",
-    "jest-puppeteer",
+    "vitest-puppeteer",
     "chromeless",
     "chrome-headless",
     "expect",

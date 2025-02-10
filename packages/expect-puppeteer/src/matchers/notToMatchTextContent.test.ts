@@ -1,10 +1,10 @@
 import { resolve } from "node:path";
 import { Frame, Page, TimeoutError } from "puppeteer";
-import { setupPage } from "./test-util";
+import { setupPage } from "./test-util.js";
 
 // import globals
-import "jest-puppeteer";
-import "expect-puppeteer";
+import "vitest-puppeteer";
+import "../index.js";
 
 describe("not.toMatchTextContent", () => {
   beforeEach(async () => {
@@ -28,7 +28,7 @@ describe("not.toMatchTextContent", () => {
       });
 
       it("should return an error if text is in the page", async () => {
-        expect.assertions(4);
+        expect.assertions(5);
 
         try {
           await expect(instance).not.toMatchTextContent("home", options);
@@ -49,7 +49,7 @@ describe("not.toMatchTextContent", () => {
     });
 
     it("should return an error if text is not in the page", async () => {
-      expect.assertions(4);
+      expect.assertions(5);
       const dialogBtn = await page.$("#dialog-btn");
 
       try {

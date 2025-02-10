@@ -1,10 +1,10 @@
 import { resolve } from "node:path";
 import { Frame, Page, TimeoutError } from "puppeteer";
-import { setupPage } from "./test-util";
+import { setupPage } from "./test-util.js";
 
 // import globals
-import "jest-puppeteer";
-import "expect-puppeteer";
+import "vitest-puppeteer";
+import "../index.js";
 
 describe("toFillForm", () => {
   beforeEach(async () => {
@@ -34,7 +34,7 @@ describe("toFillForm", () => {
     });
 
     it("should return an error if text is not in the page", async () => {
-      expect.assertions(3);
+      expect.assertions(4);
 
       try {
         await expect(instance).toFillForm('form[name="notFound"]', {
@@ -70,7 +70,7 @@ describe("toFillForm", () => {
 
     it("should return an error if text is not in the page", async () => {
       const body = await page.$("body");
-      expect.assertions(3);
+      expect.assertions(4);
 
       try {
         await expect(body).toFillForm('form[name="notFound"]', {

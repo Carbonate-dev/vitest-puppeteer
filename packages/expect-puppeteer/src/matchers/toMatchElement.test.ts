@@ -1,10 +1,10 @@
 import { resolve } from "node:path";
-import { setupPage } from "./test-util";
+import { setupPage } from "./test-util.js";
 import { Frame, Page, TimeoutError } from "puppeteer";
 
 // import globals
-import "jest-puppeteer";
-import "expect-puppeteer";
+import "vitest-puppeteer";
+import "../index.js";
 
 describe("toMatchElement", () => {
   beforeEach(async () => {
@@ -44,7 +44,7 @@ describe("toMatchElement", () => {
     });
 
     it("should return an error if element is not found", async () => {
-      expect.assertions(4);
+      expect.assertions(5);
 
       try {
         await expect(instance).toMatchElement("a", { text: "Nop" });
@@ -57,7 +57,7 @@ describe("toMatchElement", () => {
     });
 
     it("should match using visible options", async () => {
-      expect.assertions(11);
+      expect.assertions(15);
 
       const normalElement = await expect(instance).toMatchElement(".normal", {
         visible: true,
@@ -128,7 +128,7 @@ describe("toMatchElement", () => {
 
     it("should return an error if element is not found", async () => {
       const main = await page.$("main");
-      expect.assertions(3);
+      expect.assertions(4);
 
       try {
         await expect(main).toMatchElement("a", { text: "Page 2" });

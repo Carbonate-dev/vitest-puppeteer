@@ -1,6 +1,6 @@
 import type { ElementHandle } from "puppeteer";
-import { PuppeteerInstance, Selector } from "../utils";
-import { toMatchElement, ToMatchElementOptions } from "./toMatchElement";
+import { PuppeteerInstance, Selector } from "../utils.js";
+import {toMatchElement, ToMatchElementOptions} from "./toMatchElement.js";
 
 const checkIsInputElement = (
   element: ElementHandle<Element>,

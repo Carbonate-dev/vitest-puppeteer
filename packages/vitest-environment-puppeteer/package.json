@@ -1,6 +1,6 @@
 {
   "name": "vitest-environment-puppeteer",
-  "description": "Puppeteer environment for Jest.",
+  "description": "Puppeteer environment for Vitest.",
   "version": "11.0.0",
   "type": "module",
   "main": "./dist/index.js",

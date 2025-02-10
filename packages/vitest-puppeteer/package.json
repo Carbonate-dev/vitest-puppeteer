@@ -1,6 +1,6 @@
 {
   "name": "vitest-puppeteer",
-  "description": "Run your tests using Jest & Puppeteer.",
+  "description": "Run your tests using Vitest & Puppeteer.",
   "version": "11.0.0",
   "type": "module",
   "main": "./dist/index.js",

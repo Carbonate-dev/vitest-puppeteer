@@ -1,5 +1,6 @@
 {
   "name": "spawnd",
+  "private": true,
   "description": "Spawn a dependent child process.",
   "version": "11.0.0",
   "type": "module",

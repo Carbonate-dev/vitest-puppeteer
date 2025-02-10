@@ -39,7 +39,10 @@ export async function notToMatchElement(
       ...getElementArgs,
       "negative" as const,
     );
-  } catch (error: any) {
-    throw enhanceError(error, `${getSelectorMessage(rSelector, text)} found`);
+  } catch (error: unknown) {
+    throw enhanceError(
+      error as Error,
+      `${getSelectorMessage(rSelector, text)} found`,
+    );
   }
 }

@@ -13,7 +13,7 @@ export async function toMatchTextContent(
 ) {
   try {
     await matchTextContent(instance, matcher, options, "positive");
-  } catch (error: any) {
-    throw enhanceError(error, `Text not found "${matcher}"`);
+  } catch (error: unknown) {
+    throw enhanceError(error as Error, `Text not found "${matcher}"`);
   }
 }

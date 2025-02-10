@@ -232,7 +232,7 @@ const handleUsedPort = async (config: Config) => {
   return true;
 };
 
-const checkIsTimeoutError = (err: any) => {
+const checkIsTimeoutError = (err: Error) => {
   return Boolean(err?.message?.startsWith("Timed out waiting for"));
 };
 
@@ -260,7 +260,7 @@ const waitForServerToBeReady = async (config: Config) => {
 
   try {
     await waitOn(opts);
-  } catch (err: any) {
+  } catch (err: Error) {
     if (checkIsTimeoutError(err)) {
       throw new JestDevServerError(
         `Server has taken more than ${launchTimeout}ms to start.`,

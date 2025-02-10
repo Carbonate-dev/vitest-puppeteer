@@ -33,9 +33,9 @@ export async function toMatchElement(
       ...getElementArgs,
       "positive" as const,
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
     throw enhanceError(
-      error,
+      error as Error,
       `${getSelectorMessage(rSelector, text)} not found`,
     );
   }

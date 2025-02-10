@@ -3,8 +3,6 @@ import "vitest-puppeteer";
 
 describe("Basic", () => {
   beforeAll(async () => {
-    console.log(`http://localhost:${process.env.TEST_SERVER_PORT}`);
-
     await page.goto(`http://localhost:${process.env.TEST_SERVER_PORT}`);
   });
 

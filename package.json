@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "lint": "prettier --check . && eslint .",
     "test": "vitest run",
-    "test:incognito": "cross-env INCOGNITO=true vitest --runInBand",
+    "test:incognito": "cross-env INCOGNITO=true vitest run --no-file-parallelism",
     "release": "npm run build && lerna publish --conventional-commits && npx conventional-github-releaser -p angular",
     "release-canary": "npm run build && lerna publish --canary --dist-tag canary"
   },

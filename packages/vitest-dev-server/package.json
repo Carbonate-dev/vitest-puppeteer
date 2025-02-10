@@ -1,6 +1,6 @@
 {
   "name": "vitest-dev-server",
-  "description": "Starts a server before your Jest tests and tears it down after.",
+  "description": "Starts a server before your Vitest tests and tears it down after.",
   "version": "11.0.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -26,8 +26,7 @@
     "node": ">=18"
   },
   "keywords": [
-    "jest",
-    "jest-environment",
+    "vitest",
     "server"
   ],
   "publishConfig": {

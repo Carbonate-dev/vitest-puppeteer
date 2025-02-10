@@ -1,3 +1,5 @@
+## This is a port of [jest-puppeteer](https://github.com/argos-ci/jest-puppeteer) to Vitest. Some of the documentation may still refer to Jest specific things so please report any issues.
+
 # vitest-environment-puppeteer
 
 [![npm version](https://img.shields.io/npm/v/vitest-environment-puppeteer.svg)](https://www.npmjs.com/package/vitest-environment-puppeteer)

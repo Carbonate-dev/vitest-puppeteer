@@ -1,7 +1,7 @@
 {
   "name": "vitest-dev-server",
   "description": "Starts a server before your Vitest tests and tears it down after.",
-  "version": "11.0.0",
+  "version": "11.0.1-alpha.16",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

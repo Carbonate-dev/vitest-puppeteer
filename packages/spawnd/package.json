@@ -2,7 +2,7 @@
   "name": "spawnd",
   "private": true,
   "description": "Spawn a dependent child process.",
-  "version": "11.0.1-alpha.16",
+  "version": "11.0.1-alpha.20",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

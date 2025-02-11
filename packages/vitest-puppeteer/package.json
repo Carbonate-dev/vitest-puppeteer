@@ -1,7 +1,7 @@
 {
   "name": "vitest-puppeteer",
   "description": "Run your tests using Vitest & Puppeteer.",
-  "version": "11.0.1-alpha.16",
+  "version": "11.0.1-alpha.20",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "expect-puppeteer": "^11.0.0",
-    "vitest-environment-puppeteer": "^11.0.1-alpha.16"
+    "vitest-environment-puppeteer": "^11.0.1-alpha.20"
   },
   "devDependencies": {
     "rollup": "^4.29.1",

@@ -1,4 +1,4 @@
-import type { ElementHandle } from "puppeteer";
+import type { ElementHandle } from "puppeteer-core";
 import { PuppeteerInstance, Selector } from "../utils.js";
 import { toMatchElement, ToMatchElementOptions } from "./toMatchElement.js";
 

@@ -1,17 +1,7 @@
 import { cpus } from "node:os";
 import type { VitestPuppeteerConfig } from "./config.js";
-import type { PuppeteerNode, Browser } from "puppeteer";
+import puppeteer, { Browser } from "puppeteer-core";
 import { GlobalSetupContext } from "vitest/node.js";
-
-const getPuppeteer = (): PuppeteerNode => {
-  try {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    return require("puppeteer");
-  } catch {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    return require("puppeteer-core");
-  }
-};
 
 const getWorkersCount = (viConfig: GlobalSetupContext["config"]): number => {
   if (viConfig.maxWorkers != null) return Number(viConfig.maxWorkers);
@@ -20,10 +10,19 @@ const getWorkersCount = (viConfig: GlobalSetupContext["config"]): number => {
 };
 
 const openBrowser = async (config: VitestPuppeteerConfig): Promise<Browser> => {
-  const puppeteer = getPuppeteer();
   if (config.connect) {
     return puppeteer.connect(config.connect);
   }
+
+  if (!config.launch?.executablePath) {
+    const puppeteerFull = await import("puppeteer");
+
+    return puppeteer.launch({
+      executablePath: puppeteerFull.executablePath(),
+      ...config.launch,
+    });
+  }
+
   return puppeteer.launch(config.launch);
 };
 
@@ -126,7 +125,6 @@ export const connectBrowserFromWorker = async (
   config: VitestPuppeteerConfig,
 ): Promise<Browser> => {
   const wsEndpoint = getWorkerWsEndpoint();
-  const puppeteer = getPuppeteer();
   return puppeteer.connect({
     ...config.connect,
     ...config.launch,

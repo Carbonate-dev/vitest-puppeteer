@@ -1,5 +1,5 @@
 import { cosmiconfig } from "cosmiconfig";
-import type { ConnectOptions, PuppeteerLaunchOptions } from "puppeteer";
+import type { ConnectOptions, PuppeteerLaunchOptions } from "puppeteer-core";
 import type { Config as VitestDevServerConfig } from "vitest-dev-server";
 
 export interface VitestPuppeteerConfig {

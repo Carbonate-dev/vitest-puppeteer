@@ -5,7 +5,7 @@ import {
   resolveSelector,
   getSelectorMessage,
 } from "../utils.js";
-import type { ElementHandle } from "puppeteer";
+import type { ElementHandle } from "puppeteer-core";
 import { defaultOptions, Options } from "../options.js";
 import { getElementFactory, GetElementOptions } from "./getElementFactory.js";
 

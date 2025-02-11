@@ -1,5 +1,5 @@
 import { resolve } from "node:path";
-import { Frame, Page, TimeoutError } from "puppeteer";
+import { Frame, Page, TimeoutError } from "puppeteer-core";
 import { setupPage } from "./test-util.js";
 
 // import globals

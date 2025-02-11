@@ -1,6 +1,6 @@
 import { resolve } from "node:path";
 import { setupPage } from "./test-util.js";
-import { Frame, Page, TimeoutError } from "puppeteer";
+import { Frame, Page, TimeoutError } from "puppeteer-core";
 
 // import globals
 import "vitest-puppeteer";

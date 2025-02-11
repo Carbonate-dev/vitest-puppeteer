@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import type { Page, Frame } from "puppeteer";
+import type { Page, Frame } from "puppeteer-core";
 
 function waitForFrame(page: Page) {
   return new Promise<Frame>((resolve) => {

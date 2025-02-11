@@ -1,4 +1,4 @@
-import type { Page, Frame, ElementHandle } from "puppeteer";
+import type { Page, Frame, ElementHandle } from "puppeteer-core";
 
 export type PuppeteerInstance = Page | Frame | ElementHandle;
 

@@ -6,7 +6,7 @@
 [![npm dm](https://img.shields.io/npm/dm/vitest-environment-puppeteer.svg)](https://www.npmjs.com/package/vitest-environment-puppeteer)
 [![npm dt](https://img.shields.io/npm/dt/vitest-environment-puppeteer.svg)](https://www.npmjs.com/package/vitest-environment-puppeteer)
 
-Run your tests using Jest & Puppeteer 🎪✨
+Run your tests using Vitest & Puppeteer 🎪✨
 
 ```
 npm install vitest-environment-puppeteer puppeteer
@@ -14,14 +14,17 @@ npm install vitest-environment-puppeteer puppeteer
 
 ## Usage
 
-Update your Jest configuration:
+Update your Vitest configuration:
 
-```json
-{
-  "globalSetup": "vitest-environment-puppeteer/setup",
-  "globalTeardown": "vitest-environment-puppeteer/teardown",
-  "testEnvironment": "vitest-environment-puppeteer"
-}
+```typescript
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+  test: {
+    environment: "vitest-environment-puppeteer",
+    globalSetup: "vitest-environment-puppeteer/global-init",
+  },
+});
 ```
 
 Use Puppeteer in your tests:
@@ -37,28 +40,6 @@ describe("Google", () => {
     expect(text).toContain("google");
   });
 });
-```
-
-## TypeScript Setup
-
-If you’re using TypeScript, `vitest-puppeteer` natively supports it from version `8.0.0`. To get started with TypeScript, follow these steps:
-
-1. Make sure your project is using the correct type definitions. If you’ve upgraded to version `10.1.2` or above, uninstall old types:
-
-```bash
-npm uninstall --save-dev @types/vitest-environment-puppeteer @types/expect-puppeteer
-```
-
-2. Install `@types/jest` (`vitest-puppeteer` does not support `@jest/globals`) :
-
-```bash
-npm install --save-dev @types/jest
-```
-
-3. Import the `vitest-puppeteer` module to expose the global API :
-
-```ts
-import "vitest-puppeteer";
 ```
 
 ## API
@@ -123,7 +104,7 @@ beforeEach(async () => {
 
 ### Config
 
-Jest Puppeteer uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) for configuration file support. This means you can configure Jest Puppeteer via (in order of precedence):
+Vitest Puppeteer uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) for configuration file support. This means you can configure Vitest Puppeteer via (in order of precedence):
 
 - A `"vitest-puppeteer"` key in your `package.json` file.
 - A `.vitest-puppeteerrc` file written in JSON or YAML.

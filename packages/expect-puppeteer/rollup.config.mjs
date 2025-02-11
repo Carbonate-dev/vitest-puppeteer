@@ -27,7 +27,7 @@ export default [
   bundle({
     output: {
       file: "dist/index.js",
-      format: "esm",
+      format: "es",
     },
     plugins: [swcPlugin],
   }),

@@ -28,7 +28,7 @@ export default [
     input: "src/global-init.ts",
     output: {
       file: "dist/global-init.js",
-      format: "esm",
+      format: "es",
       interop: "compat",
     },
     plugins: [swcPlugin],
@@ -36,7 +36,7 @@ export default [
   bundle({
     output: {
       file: "dist/index.js",
-      format: "esm",
+      format: "es",
       interop: "compat",
     },
     plugins: [swcPlugin],

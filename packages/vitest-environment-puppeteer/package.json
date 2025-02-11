@@ -10,8 +10,7 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
-    "./setup": "./setup.js",
-    "./teardown": "./teardown.js",
+    "./global-init": "./dist/global-init.js",
     "./package.json": "./package.json"
   },
   "repository": {

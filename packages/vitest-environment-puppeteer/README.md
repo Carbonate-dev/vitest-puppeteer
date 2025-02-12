@@ -30,6 +30,8 @@ export default defineConfig({
 Use Puppeteer in your tests:
 
 ```js
+import "vitest-puppeteer";
+
 describe("Google", () => {
   beforeAll(async () => {
     await page.goto("https://google.com");
@@ -41,6 +43,10 @@ describe("Google", () => {
   });
 });
 ```
+
+## TypeScript Setup
+
+If you’re using TypeScript, make sure to include `vitest-puppeteer` to include the necessary type definitions.
 
 ## API
 

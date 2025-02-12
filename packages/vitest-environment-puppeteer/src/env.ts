@@ -4,7 +4,7 @@ import { blockStdin } from "./stdin.js";
 import { connectBrowserFromWorker } from "./browsers.js";
 import type { VitestPuppeteerConfig } from "./config.js";
 import type { Page, BrowserContext, Browser } from "puppeteer-core";
-import { Environment } from "vitest";
+import { Environment } from "vitest/environments";
 
 type VitestPuppeteer = {
   debug: () => Promise<void>;

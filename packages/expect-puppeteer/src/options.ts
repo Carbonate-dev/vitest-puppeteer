@@ -1,4 +1,4 @@
-import type { FrameWaitForFunctionOptions } from "puppeteer-core";
+import type { FrameWaitForFunctionOptions } from "puppeteer";
 
 export type Options = FrameWaitForFunctionOptions;
 

@@ -1,4 +1,4 @@
-import type { ClickOptions } from "puppeteer-core";
+import type { ClickOptions } from "puppeteer";
 import { PuppeteerInstance, Selector } from "../utils.js";
 import { toMatchElement, ToMatchElementOptions } from "./toMatchElement.js";
 

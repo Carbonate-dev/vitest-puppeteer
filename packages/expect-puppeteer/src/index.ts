@@ -18,7 +18,7 @@ import {
 
 // import interfaces and types
 import type { ExpectStatic as JestExpect } from "@vitest/expect";
-import type { ElementHandle, Frame, Page } from "puppeteer-core";
+import type { ElementHandle, Frame, Page } from "puppeteer";
 import type { PuppeteerInstance } from "./utils.js";
 
 // reexport

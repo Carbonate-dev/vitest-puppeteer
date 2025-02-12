@@ -3,7 +3,7 @@ import { readConfig } from "./config.js";
 import { blockStdin } from "./stdin.js";
 import { connectBrowserFromWorker } from "./browsers.js";
 import type { VitestPuppeteerConfig } from "./config.js";
-import type { Page, BrowserContext, Browser } from "puppeteer-core";
+import type { Page, BrowserContext, Browser } from "puppeteer";
 import { Environment } from "vitest/environments";
 
 type VitestPuppeteer = {

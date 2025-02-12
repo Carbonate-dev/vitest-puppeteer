@@ -8,7 +8,7 @@ import {
 import chalk from "chalk";
 import { closeBrowsers, startBrowsers } from "./browsers.js";
 import { VitestPuppeteerConfig, readConfig } from "./config.js";
-import type { Browser } from "puppeteer-core";
+import type { Browser } from "puppeteer";
 import { GlobalSetupContext } from "vitest/node";
 
 type Context = {

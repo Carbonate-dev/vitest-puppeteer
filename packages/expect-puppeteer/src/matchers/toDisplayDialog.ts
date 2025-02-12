@@ -1,4 +1,4 @@
-import type { Dialog, Page } from "puppeteer-core";
+import type { Dialog, Page } from "puppeteer";
 
 export async function toDisplayDialog(page: Page, block: () => Promise<void>) {
   return new Promise<Dialog>((resolve, reject) => {

@@ -1,1 +1,3 @@
-module.exports = require("./dist/global-init").teardown;
+import { teardown } from "./dist/global-init";
+
+export default teardown.teardown;

@@ -1,1 +1,3 @@
-module.exports = require("./dist/global-init").setup;
+import { setup } from "./dist/global-init";
+
+export default setup.setup;

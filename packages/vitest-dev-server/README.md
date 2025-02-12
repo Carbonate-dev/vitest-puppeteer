@@ -26,26 +26,26 @@ npm install --save-dev vitest-dev-server
 
 ```js
 // global-setup.js
-const { setup: setupDevServer } = require("vitest-dev-server");
+import { setup as setupDevServer } from "vitest-dev-server";
 
-module.exports = async function globalSetup() {
+export default async function globalSetup() {
   globalThis.servers = await setupDevServer({
     command: `node config/start.js --port=3000`,
     launchTimeout: 50000,
     port: 3000,
   });
   // Your global setup
-};
+}
 ```
 
 ```js
 // global-teardown.js
-const { teardown: teardownDevServer } = require("vitest-dev-server");
+import { teardown as teardownDevServer } from "vitest-dev-server";
 
-module.exports = async function globalTeardown() {
+export default async function globalTeardown() {
   await teardownDevServer(globalThis.servers);
   // Your global teardown
-};
+}
 ```
 
 ### Specify several servers
@@ -54,9 +54,9 @@ You can specify several servers using an array of configs:
 
 ```js
 // global-setup.js
-const { setup: setupDevServer } = require("vitest-dev-server");
+import { setup as setupDevServer } from "vitest-dev-server";
 
-module.exports = async function globalSetup() {
+export default async function globalSetup() {
   globalThis.servers = await setupDevServer([
     {
       command: "node server.js",
@@ -68,7 +68,7 @@ module.exports = async function globalSetup() {
     },
   ]);
   // Your global setup
-};
+}
 ```
 
 ## Options

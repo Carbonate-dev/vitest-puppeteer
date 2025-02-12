@@ -21,8 +21,8 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
-    environment: "vitest-environment-puppeteer",
-    globalSetup: "vitest-environment-puppeteer/global-init",
+    environment: "puppeteer",
+    globalSetup: "node_modules/vitest-environment-puppeteer/dist/global-init.js",
   },
 });
 ```

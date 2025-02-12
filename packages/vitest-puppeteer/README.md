@@ -2,9 +2,9 @@
 
 # vitest-puppeteer
 
-[![npm version](https://img.shields.io/npm/v/jest-puppeteer.svg)](https://www.npmjs.com/package/jest-puppeteer)
-[![npm dm](https://img.shields.io/npm/dm/jest-puppeteer.svg)](https://www.npmjs.com/package/jest-puppeteer)
-[![npm dt](https://img.shields.io/npm/dt/jest-puppeteer.svg)](https://www.npmjs.com/package/jest-puppeteer)
+[![npm version](https://img.shields.io/npm/v/vitest-puppeteer.svg)](https://www.npmjs.com/package/vitest-puppeteer)
+[![npm dm](https://img.shields.io/npm/dm/vitest-puppeteer.svg)](https://www.npmjs.com/package/vitest-puppeteer)
+[![npm dt](https://img.shields.io/npm/dt/vitest-puppeteer.svg)](https://www.npmjs.com/package/vitest-puppeteer)
 
 Vitest environment containing all required configuration for writing integration tests using Puppeteer.
 
@@ -14,9 +14,13 @@ npm install vitest-puppeteer puppeteer
 
 ## Usage
 
-```js
-// jest.config.js
-module.exports = {
-  preset: "jest-puppeteer",
-};
+```typescript
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+  test: {
+    environment: "puppeteer",
+    globalSetup: "node_modules/vitest-environment-puppeteer/dist/global-init.js",
+  },
+});
 ```

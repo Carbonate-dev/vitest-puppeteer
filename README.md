@@ -283,7 +283,7 @@ vitest run --no-file-parallelism
 Alternatively, you can limit the number of parallel workers:
 
 ```bash
-jest --maxWorkers=2
+vitest run --maxWorkers=2
 ```
 
 This ensures that your CI environment doesn’t get overloaded by too many concurrent processes, which can improve the reliability of your tests.

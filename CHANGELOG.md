@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.3](https://github.com/carbonate-dev/vitest-puppeteer/compare/v11.0.1-alpha.21...v11.0.3) (2025-02-22)
+
+**Note:** Version bump only for package vitest-puppeteer
+
+
+
+
+
 ## [11.0.1-alpha.21](https://github.com/carbonate-dev/vitest-puppeteer/compare/v11.0.0...v11.0.1-alpha.21) (2025-02-22)
 
 **Note:** Version bump only for package vitest-puppeteer

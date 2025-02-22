@@ -27,8 +27,8 @@
     "node": ">=18"
   },
   "keywords": [
-    "jest",
-    "jest-environment",
+    "vitest",
+    "vitest-environment",
     "puppeteer",
     "vitest-puppeteer",
     "chromeless",

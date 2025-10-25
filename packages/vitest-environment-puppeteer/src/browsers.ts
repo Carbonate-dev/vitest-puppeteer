@@ -67,8 +67,8 @@ const getJestWorkerId = (): number => {
 };
 
 const getWorkerIndex = () => {
-  // Jest worker ID starts at 1
-  return getJestWorkerId() - 1;
+  // Worker ID starts at 0 from Vitest v4 onwards
+  return getJestWorkerId();
 };
 
 const getWorkerWsEndpointIndex = () => {

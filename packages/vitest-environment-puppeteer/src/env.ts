@@ -134,7 +134,7 @@ const closeAll = async (global: StrictGlobal) => {
 
 export const PuppeteerEnvironment = <Environment>{
   name: "puppeteer",
-  transformMode: "ssr",
+  viteEnvironment: "ssr",
   async setup(global) {
     global.puppeteerConfig = await readConfig();
     global.vitestPuppeteer = {

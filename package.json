@@ -25,7 +25,7 @@
     "eslint-plugin-vitest": "^0.5.4",
     "express": "^4.21.2",
     "jsdom": "^25.0.1",
-    "lerna": "^8.1.9",
+    "lerna": "^9.0.5",
     "prettier": "^3.4.2",
     "puppeteer": "^23.11.1",
     "typescript": "^5.7.2",
